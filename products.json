@@ -1,0 +1,182 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Maeve Pleated Midi Dress",
+      "price": 3200,
+      "category": "Women",
+      "badge": "Best Seller",
+      "description": "A flowing pleated midi dress with a fitted bodice — dress it up for evenings out or wear it relaxed with sandals.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-dress1/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-dress1b/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-dress1c/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        { "name": "Teal", "hex": "#3f6f64" },
+        { "name": "Black", "hex": "#1a1a1a" },
+        { "name": "Sand", "hex": "#c9b48c" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Amara Corset Sundress",
+      "price": 3450,
+      "category": "Women",
+      "description": "Corset-style bodice with a light, breezy skirt — built for warm days.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-dress2/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-dress2b/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-dress2c/700/900" }
+      ],
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": [
+        { "name": "Sky Blue", "hex": "#7fa8c9" },
+        { "name": "White", "hex": "#f5f3ee" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Eli Relaxed Stripe Shirt",
+      "price": 2100,
+      "category": "Men",
+      "badge": "New",
+      "description": "A relaxed-fit striped shirt that works buttoned up for the office or open over a tee on weekends.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-mens1/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-mens1b/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-mens1c/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        { "name": "Black & White", "hex": "#1a1a1a" },
+        { "name": "Navy", "hex": "#2b3550" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Tailored Twill Trousers",
+      "price": 2800,
+      "category": "Men",
+      "description": "Sharp, tailored trousers in a durable twill weave.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-mens2/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-mens2b/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-mens2c/700/900" }
+      ],
+      "sizes": ["30", "32", "34", "36", "38"],
+      "colors": [
+        { "name": "Stone", "hex": "#c9bfa8" },
+        { "name": "Charcoal", "hex": "#3a3a3a" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Zawadi Linen Blazer",
+      "price": 5400,
+      "category": "Women",
+      "badge": "New",
+      "description": "A lightweight linen blazer that layers over almost anything without ever feeling heavy.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-blazer/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-blazerb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-blazerc/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        { "name": "Beige", "hex": "#d8c7a8" },
+        { "name": "Black", "hex": "#1a1a1a" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Classic Black Hoodie",
+      "price": 2500,
+      "category": "Unisex",
+      "description": "A heavyweight everyday hoodie — soft fleece lining, roomy front pocket.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-hoodie/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-hoodieb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-hoodiec/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": [
+        { "name": "Black", "hex": "#1a1a1a" },
+        { "name": "Grey", "hex": "#8a8a8a" },
+        { "name": "Olive", "hex": "#5b5f45" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Kito Denim Jacket",
+      "price": 3900,
+      "category": "Unisex",
+      "badge": "Best Seller",
+      "description": "A classic denim jacket that only gets better with wear.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-denim/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-denimb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-denimc/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        { "name": "Denim Blue", "hex": "#3f5a7a" },
+        { "name": "Black", "hex": "#1a1a1a" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nia Wrap Blouse",
+      "price": 2350,
+      "category": "Women",
+      "description": "A soft wrap blouse that flatters every shape — pairs easily with jeans or a skirt.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-blouse/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-blouseb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-blousec/700/900" }
+      ],
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": [
+        { "name": "Cream", "hex": "#efe6d3" },
+        { "name": "Terracotta", "hex": "#b3653f" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Oren Slim Fit Chinos",
+      "price": 2600,
+      "category": "Men",
+      "description": "Slim-fit chinos that go from desk to dinner without changing.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-chinos/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-chinosb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-chinosc/700/900" }
+      ],
+      "sizes": ["30", "32", "34", "36"],
+      "colors": [
+        { "name": "Khaki", "hex": "#b8a97c" },
+        { "name": "Navy", "hex": "#2b3550" },
+        { "name": "Black", "hex": "#1a1a1a" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Amani Knit Sweater",
+      "price": 3100,
+      "category": "Unisex",
+      "badge": "New",
+      "description": "A soft knit sweater in a relaxed fit — layers well as the evenings cool down.",
+      "images": [
+        { "image": "https://picsum.photos/seed/nyaboke-sweater/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-sweaterb/700/900" },
+        { "image": "https://picsum.photos/seed/nyaboke-sweaterc/700/900" }
+      ],
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": [
+        { "name": "Brass", "hex": "#b3874c" },
+        { "name": "Cream", "hex": "#efe6d3" }
+      ]
+    }
+  ]
+}
