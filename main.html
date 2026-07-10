@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nyaboke Smartwear — Where Style Meets Confidence</title>
+  <meta name="description" content="Nyaboke Smartwear is a premium Kenyan fashion catalogue. Browse dresses, menswear and unisex pieces, add to your cart, and order directly on WhatsApp." />
+  <meta name="theme-color" content="#16140f" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Nyaboke Smartwear — Where Style Meets Confidence" />
+  <meta property="og:description" content="Browse the collection and order on WhatsApp in a few taps." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Fraunces (display) + Manrope (body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Sends Netlify Identity invite/confirmation links to the admin
+       login instead of leaving the person stranded on the homepage. -->
+  <script>
+    if (/invite_token|recovery_token|confirmation_token|email_change_token/.test(window.location.hash)) {
+      window.location.href = "/admin/" + window.location.hash;
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAV ==================== -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#hero" class="logo">Nyaboke<span>.</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#catalogue">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn js-open-cart" aria-label="Open cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6H21L19 15H8L6 6ZM6 6L5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="17" cy="20" r="1.4" fill="currentColor"/></svg>
+          <span class="cart-count">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-shape"></div>
+      <div class="container">
+        <div class="hero__copy" data-reveal>
+          <p class="eyebrow">Nairobi · Kenya</p>
+          <h1 class="hero__title">Where Style<br />Meets <em>Confidence</em>.</h1>
+          <p class="hero__tagline">Premium everyday fashion for men and women, curated in Nairobi and delivered to your door — no fuss, just great fits.</p>
+          <div class="hero__actions">
+            <a href="#catalogue" class="btn btn--primary">Shop Now</a>
+            <a href="#collection" class="btn btn--ghost">View Collection</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>500+</strong>
+              <span>Happy customers</span>
+            </div>
+            <div class="hero__stat">
+              <strong>4.9★</strong>
+              <span>Average rating</span>
+            </div>
+            <div class="hero__stat">
+              <strong>48hr</strong>
+              <span>Nairobi delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <img class="hero__img hero__img--1" src="https://picsum.photos/seed/nyaboke-hero1/500/700" alt="Model wearing a Nyaboke Smartwear pleated midi dress" />
+          <img class="hero__img hero__img--2" src="https://picsum.photos/seed/nyaboke-hero2/420/460" alt="Model wearing a Nyaboke Smartwear striped shirt" />
+          <div class="hero__badge">New Drop<strong>-20%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED COLLECTION ==================== -->
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Featured</p>
+          <h2>This Week's Collection</h2>
+          <p>A tight edit of our most-loved pieces — handpicked so you don't have to scroll forever.</p>
+        </div>
+
+        <div class="product-grid" id="featuredGrid" data-reveal="stagger">
+          <p class="grid-loading">Loading the collection…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FULL CATALOGUE ==================== -->
+    <section class="section section--stone" id="catalogue">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">The Catalogue</p>
+          <h2>Shop All Pieces</h2>
+          <p>Every item we stock, in one place. Tap a category to narrow things down.</p>
+        </div>
+
+        <div class="filter-bar" id="filterBar"></div>
+
+        <div class="product-grid" id="productGrid">
+          <p class="grid-loading">Loading the collection…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <img class="about__img about__img--desktop-order" src="https://picsum.photos/seed/nyaboke-about/700/525" alt="Inside the Nyaboke Smartwear studio in Nairobi" data-reveal />
+
+        <div data-reveal>
+          <p class="eyebrow">Our Story</p>
+          <h2>Nairobi-made, made for you.</h2>
+          <p style="color:var(--gray); margin-top: var(--space-xs); max-width: 48ch;">
+            Nyaboke Smartwear started as a small tailoring corner in Nairobi and grew into a
+            go-to wardrobe for people who want quality clothing without the guesswork.
+            Every piece is chosen for fit, fabric, and how it makes you feel walking into a room.
+          </p>
+          <ul class="about__list">
+            <li>Locally sourced fabrics, tailored for the Kenyan climate</li>
+            <li>Quality-checked before every single order ships</li>
+            <li>Real people to talk to — order and get help over WhatsApp</li>
+            <li>New drops added to the catalogue every week</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section section--stone" id="contact">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Get In Touch</p>
+          <h2>We'd Love to Hear From You</h2>
+        </div>
+
+        <div class="contact" data-reveal="stagger">
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5.5C3 4.67 3.67 4 4.5 4H7.5L9.5 9L7 10.5C8 13 11 16 13.5 17L15 14.5L20 16.5V19.5C20 20.33 19.33 21 18.5 21C10 21 3 14 3 5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4>WhatsApp / Call</h4>
+              <p>+254 700 000 000</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@nyabokesmartwear.co.ke</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 5 14.5 5 9.5C5 5.9 8.13 3 12 3C15.87 3 19 5.9 19 9.5C19 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <div>
+              <h4>Showroom</h4>
+              <p>Moi Avenue, Nairobi CBD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">Nyaboke<span>.</span></a>
+          <p>Premium Kenyan fashion — browse, add to cart, order on WhatsApp. That's it.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Shop</h5>
+          <a href="#catalogue">All Products</a>
+          <a href="#catalogue">Men</a>
+          <a href="#catalogue">Women</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Reach Us</h5>
+          <p>+254 700 000 000</p>
+          <p>Nairobi, Kenya</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Nyaboke Smartwear. All rights reserved.</span>
+        <span>Ordering made simple — powered by WhatsApp.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== QUICK VIEW MODAL ==================== -->
+  <div class="qv-overlay" id="qvOverlay"></div>
+  <div class="qv-modal" id="qvModal" aria-label="Product quick view">
+    <button class="qv-modal__close" id="qvClose" aria-label="Close quick view">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="qv-gallery">
+      <div class="qv-gallery__track" id="qvTrack"></div>
+      <button class="qv-gallery__nav qv-gallery__nav--prev" aria-label="Previous photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="qv-gallery__nav qv-gallery__nav--next" aria-label="Next photo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="qv-gallery__dots" id="qvDots"></div>
+    </div>
+
+    <div class="qv-info">
+      <h3 class="qv-info__name" id="qvName"></h3>
+      <p class="qv-info__price" id="qvPrice"></p>
+      <p class="qv-info__description" id="qvDescription"></p>
+
+      <div class="qv-section">
+        <p class="qv-label">Choose Size</p>
+        <div class="qv-chips" id="qvSizes"></div>
+      </div>
+
+      <div class="qv-section">
+        <p class="qv-label">Choose Colour</p>
+        <div class="qv-swatches" id="qvColors"></div>
+      </div>
+
+      <div class="qv-section qv-section--row">
+        <p class="qv-label">Quantity</p>
+        <div class="qv-qty">
+          <button data-qv-qty="-1" aria-label="Decrease quantity">−</button>
+          <span id="qvQty">1</span>
+          <button data-qv-qty="1" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+      <button class="btn btn--primary btn--block" id="qvAddBtn">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- ==================== CART DRAWER ==================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-drawer__head">
+      <h3>Your Cart</h3>
+      <button class="cart-drawer__close" id="closeCart" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <div class="cart-empty" id="cartEmpty">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M6 6H21L19 15H8L6 6ZM6 6L5 3H2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Your cart is empty.<br />Add something you'll love.</p>
+      </div>
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+
+    <div class="cart-drawer__foot">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotal">KSh 0</span>
+      </div>
+
+      <form class="checkout-form" id="checkoutForm">
+        <input type="text" name="customerName" placeholder="Your full name" required />
+        <input type="tel" name="customerPhone" placeholder="Phone number" required />
+        <input type="text" name="customerLocation" placeholder="Delivery location" required />
+        <button type="submit" class="btn btn--primary btn--block" id="checkoutBtn" disabled>
+          Order on WhatsApp
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- ==================== TOAST ==================== -->
+  <div class="toast" id="toast"></div>
+
+  <!-- One combined file: products, cart logic, WhatsApp logic, and app logic -->
+  <script src="js/main.js"></script>
+  <script>
+    // Small inline touch: auto-fill the footer year, no need for its own file
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
