@@ -1,0 +1,71 @@
+# ==========================================================================
+# DECAP CMS CONFIG
+# --------------------------------------------------------------------------
+# This file controls everything you see at /admin — the form fields,
+# labels, and where the data gets saved. You generally won't need to
+# touch this once it's working; it's here mainly so you can see how
+# a field maps to the form (and to add new fields later if you want).
+# ==========================================================================
+
+backend:
+  name: git-gateway
+  branch: main # the branch Netlify deploys from
+
+# Where uploaded product photos are stored in the repo, and the URL
+# path the website uses to load them.
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Shows a live "Publish" vs "Draft" flow. Keeping it simple: every
+# save goes straight to the live branch.
+publish_mode: simple
+
+collections:
+  - name: "products"
+    label: "Products"
+    icon: "shopping-bag"
+    # A "files" collection = one JSON file holding a list, rather than
+    # one file per product. Matches how main.js reads the catalogue.
+    files:
+      - file: "content/products.json"
+        label: "Product Catalogue"
+        name: "catalogue"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} — KSh {{fields.price}}"
+            fields:
+              - { label: "ID (unique number, don't repeat)", name: "id", widget: "number", value_type: "int" }
+              - { label: "Product Name", name: "name", widget: "string" }
+              - { label: "Price (KSh, numbers only)", name: "price", widget: "number", value_type: "int" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Men", "Women", "Unisex"]
+              - label: "Badge (optional)"
+                name: "badge"
+                widget: "select"
+                required: false
+                options: ["New", "Best Seller"]
+              - label: "Description (optional)"
+                name: "description"
+                widget: "text"
+                required: false
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.image}}"
+                field: { label: "Image", name: "image", widget: "image" }
+              - label: "Sizes (e.g. S, M, L, XL)"
+                name: "sizes"
+                widget: "list"
+                required: false
+              - label: "Colours"
+                name: "colors"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Colour Name", name: "name", widget: "string" }
+                  - { label: "Colour Swatch", name: "hex", widget: "color" }
